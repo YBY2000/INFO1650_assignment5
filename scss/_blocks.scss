@@ -1,0 +1,22 @@
+.block {
+    padding: 20px;
+    font-size: $font-size-small;
+    font-family: $font-stack;
+    color: white;
+    background-color: rgba(22, 22, 22, 0.688);
+
+    &-1 {
+        // grid-area: 1 / 2 / 2 / 3;
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+    }
+
+    &-11 {
+        grid-row: 4 / 5;
+        grid-column: 2 / 4;
+    }
+
+    &-12 {
+        height: 400px;
+    }
+}
