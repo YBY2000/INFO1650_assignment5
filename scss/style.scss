@@ -1,0 +1,60 @@
+@import 'config';
+@import 'utilities';
+@import 'items';
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.my_header {
+    height: 100px;
+    @include set-background(yellowgreen);
+    text-align: center;
+    padding: 10px;
+}
+
+
+.btn {
+    width: var(--widthS);
+    height: 50px;
+    @include set-background(orange);
+    border-radius: 5px;
+    margin: 30px auto;
+    padding: 15px;
+    text-align: center;
+
+    &:hover {
+        transform: scale(0.94);
+        color: $my-color7;
+    }
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    height: 80px;
+    width: 80px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+a {
+    text-decoration: none;
+}
+
+.intro {
+    margin-top: 10px;
+    font-size: $font-size-small;
+    font-family: $font-stack;
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+}

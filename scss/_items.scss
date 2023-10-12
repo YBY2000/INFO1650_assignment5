@@ -1,0 +1,58 @@
+%item_style {
+    padding: 20px;
+    font-size: $font-size-small;
+    font-family: $font-stack;
+    text-align: center;
+    color: $textcolor-dark;
+}
+
+
+.item1 {
+    margin: 10px;
+    @extend %item_style;
+
+}
+
+.item2 {
+    @extend %item_style;
+}
+
+.item3 {
+    @extend %item_style;
+    
+    &-2 {
+        @include set-background($my-color2);
+        height: 100px;
+    }
+    
+    &-4 {
+        @include set-background($my-color4);
+        font-size: $font-size-large;
+    }
+}
+
+// .item4 .item5
+$spaceamounts: (4, 5);
+@each $space in $spaceamounts {
+    .item#{$space} {
+        margin: 20px;
+        @extend %item_style;
+    }
+}
+
+
+$item_index: (1,2,3,4,5,6,7,8,9,10);
+@each $index in $item_index {
+    .item-#{$index} {
+        @if $index==1 {@include set-background($my-color1);}
+        @else if $index==2 {@include set-background($my-color2);}
+        @else if $index==3 {@include set-background($my-color3);}
+        @else if $index==4 {@include set-background($my-color4);}
+        @else if $index==5 {@include set-background($my-color5);}
+        @else if $index==6 {@include set-background($my-color6);}
+        @else if $index==7 {@include set-background($my-color7);}
+        @else if $index==8 {@include set-background($my-color8);}
+        @else if $index==9 {@include set-background($my-color9);}
+        @else if $index==10 {@include set-background($my-color10);}
+    }
+}

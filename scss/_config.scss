@@ -1,0 +1,54 @@
+$font-stack: Arial, Helvetica, sans-serif;
+$background-grey: #dbdbdb;
+$textcolor-light: #fff;
+$textcolor-dark: #000;
+$my-color1: orangered;
+$my-color2: yellowgreen;
+$my-color3: blueviolet;
+$my-color4: lightcyan;
+$my-color5: pink;
+$my-color6: goldenrod;
+$my-color7: red;
+$my-color8: blue;
+$my-color9: white;
+$my-color10: black;
+$font-size-small: 20px;
+$font-size-medium: 30px;
+$font-size-large: 40px;
+
+$hydro: royalblue;
+$cryo: lightblue;
+$anemo: rgb(26, 230, 179);
+$dendro: rgb(49, 189, 30);
+$pyro:rgb(202, 36, 36);
+$electro:rgb(219, 56, 219);
+
+:root {
+    --widthXL: 1600px;
+    --widthL: 1400px;
+    --widthM: 800px;
+    --widthS: 300px;
+    --marginL:30px;
+    --marginM:20px;
+    --marginS:10px;
+}
+
+
+
+
+// set the text color based on background color
+@function set-text-color($color) {
+    @if(lightness($color) > 70) {
+        @return $textcolor-dark;
+    }
+    @else {
+        @return $textcolor-light;
+    }
+}
+
+
+// set the background and text color
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}

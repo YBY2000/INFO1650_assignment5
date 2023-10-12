@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Assignment5</title>
+</head>
+<body>
+    <header class="my_header"><h1>A Simple Demostration of Flexbox</h1></header>
+    <main>
+        <div class="box">
+            <div class="box_item">
+                <div class="showtext">Lets see how <span class="highlight_text">flex-direction</span> influence the layout:</div>
+                <div class="showcase">
+                    <label for="direction"><h3>When we set "flex-direction = </label>
+                    <select name="direction" id="direction" onchange="changeDirection()">
+                        <option value="1">row</option>
+                        <option value="2">row-reverse</option>
+                        <option value="3">column</option>
+                        <option value="4">column-reverse</option>
+                    </select>"</h3>
+                    <div class="container" id="dir_container" style="display: flex;">
+                        <div class="item1 item-1">1: Orange</div>
+                        <div class="item1 item-2">2: Green</div>
+                        <div class="item1 item-3">3: Purple</div>
+                        <div class="item1 item-4">4: Cyan</div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="box_item">
+                <div class="showtext">Lets see how <span class="highlight_text">justify-content</span> influence the layout:</div>
+                <div class="showcase">
+                    <label for="justify_content"><h3>When we set "justify-content = </label>
+                    <select name="justify_content" id="justify_content" onchange="changeJustifyContent()">
+                        <option value="1">flex-start</option>
+                        <option value="2">flex-end</option>
+                        <option value="3">center</option>
+                        <option value="4">space-between</option>
+                        <option value="5">space-around</option>
+                    </select>"</h3>
+                    <div class="container" id="justify_content_container" style="display: flex;">
+                        <div class="item2 item-1">1: Orange</div>
+                        <div class="item2 item-2">2: Green</div>
+                        <div class="item2 item-3">3: Purple</div>
+                        <div class="item2 item-4">4: Cyan</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="box_item">
+                <div class="showtext">Lets see how <span class="highlight_text">align-item</span> influence the layout:</div>
+                <div class="showcase">
+                    <label for="align_items"><h3>When we set "align-items = </label>
+                    <select name="align_items" id="align_items" onchange="changeAlignItems()">
+                        <option value="1">flex-start</option>
+                        <option value="2">flex-end</option>
+                        <option value="3">center</option>
+                        <option value="4" selected>stretch</option>
+                        <option value="5">baseline</option>
+                    </select>"</h3>
+                    <div class="container" id="align_items_container" style="display: flex;">
+                        <div class="item3 item-1">1: Orange</div>
+                        <div class="item3 item3-2">2: Green</div>
+                        <div class="item3 item-3">3: Purple</div>
+                        <div class="item3 item3-4">4: Cyan</div>
+                        <div class="item3 item-5">5: Pink</div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="box_item">
+                <div class="showtext">Lets see how <span class="highlight_text">flex-wrap</span> influence the layout:</div>
+                <div class="showcase">
+                    <label for="flex_wrap"><h3>When we set "flex-wrap = </label>
+                    <select name="flex_wrap" id="flex_wrap" onchange="changeFlexWrap()">
+                        <option value="1" selected>nowrap</option>
+                        <option value="2">wrap</option>
+                        <option value="3">wrap-reverse</option>
+                    </select>"</h3>
+                    <div class="container" id="flex_wrap_container" style="display: flex;">
+                        <div class="item4 item-1">1: Orange</div>
+                        <div class="item4 item-2">2: Green</div>
+                        <div class="item4 item-3">3: Purple</div>
+                        <div class="item4 item-4">4: Cyan</div>
+                        <div class="item4 item-5">5: Pink</div>
+                        <div class="item4 item-6">6: Brown</div>
+                        <div class="item4 item-7">7: Red</div>
+                        <div class="item4 item-8">8: Blue</div>
+                        <div class="item4 item-9">9: White</div>
+                        <div class="item4 item-10">10: Black</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        <div class="showtext">Lets see how <span class="highlight_text">align-content</span> influence the layout:</div>
+        <div class="showcase">
+            <label for="align_content"><h3>When we set "align-content = </label>
+            <select name="align_content" id="align_content" onchange="changeAlignContent()">
+                <option value="1">flex-start</option>
+                <option value="2">flex-end</option>
+                <option value="3">center</option>
+                <option value="4">space-between</option>
+                <option value="5">space-around</option>
+                <option value="6" selected>stretch</option>
+            </select>"</h3>
+            <div class="container" id="align_content_container" style="display: flex; height: 500px; flex-wrap: wrap;">
+                <div class="item5 item-1" style="height: 50px;">1: Orange</div>
+                <div class="item5 item-2" style="height: 50px;">2: Green</div>
+                <div class="item5 item-3" style="height: 50px;">3: Purple</div>
+                <div class="item5 item-4" style="height: 50px;">4: Cyan</div>
+                <div class="item5 item-5" style="height: 50px;">5: Pink</div>
+                <div class="item5 item-6" style="height: 50px;">6: Brown</div>
+                <div class="item5 item-7" style="height: 50px;">7: Red</div>
+                <div class="item5 item-8" style="height: 50px;">8: Blue</div>
+                <div class="item5 item-9" style="height: 50px;">9: White</div>
+                <div class="item5 item-10" style="height: 50px;">10: Black</div>
+            </div>
+        </div>
+
+        <div class="btn"><a href="page2.html">Go To See CSS GRID >></a></div>
+    </main>
+    
+</body>
+<script src="script.js"></script>
+</html>
